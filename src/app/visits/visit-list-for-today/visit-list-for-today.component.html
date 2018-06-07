@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="container xd-container">
+    <h2>Visits for today</h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Description</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let visit of visits">
+          <td>{{visit.id}}</td>
+          <td>{{visit.description}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

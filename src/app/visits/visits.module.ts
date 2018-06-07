@@ -32,6 +32,7 @@ import {PetsRoutingModule} from '../pets/pets-routing.module';
 import {MatMomentDateModule, MomentDateAdapter} from '@angular/material-moment-adapter';
 import {MatDatepickerModule} from '@angular/material';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import {VisitListForTodayComponent} from './visit-list-for-today/visit-list-for-today.component';
 
 export const MY_DATE_FORMATS = {
   parse: {
@@ -55,11 +56,13 @@ export const MY_DATE_FORMATS = {
     PetsRoutingModule
   ],
   declarations: [
+    VisitListForTodayComponent,
     VisitListComponent,
     VisitEditComponent,
     VisitAddComponent
   ],
   exports: [
+    VisitListForTodayComponent,
     VisitListComponent,
     VisitEditComponent,
     VisitAddComponent

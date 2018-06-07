@@ -22,12 +22,14 @@
 
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {VisitListForTodayComponent} from './visit-list-for-today/visit-list-for-today.component';
 import {VisitListComponent} from './visit-list/visit-list.component';
 import {VisitEditComponent} from './visit-edit/visit-edit.component';
 import {VisitAddComponent} from './visit-add/visit-add.component';
 
 const visitRoutes: Routes = [
   {path: 'visits', component: VisitListComponent},
+  {path: 'visits-for-today', component: VisitListForTodayComponent},
   {path: 'visits/add', component: VisitAddComponent},
   {path: 'visits/:id/edit', component: VisitEditComponent}
 

@@ -25,6 +25,7 @@ import {Observable} from 'rxjs';
 import {Visit} from './visit';
 import {environment} from '../../environments/environment';
 import {Http, Response, Headers, RequestOptions} from '@angular/http';
+import * as moment from 'moment';
 
 @Injectable()
 export class VisitService {
@@ -92,4 +93,9 @@ export class VisitService {
     return Observable.throw(errMsg);
   }
 
+  getVisitsForToday() {
+    return this._http.get(this.entity_url + '?date=' + moment().format('YYYY-MM-DD'))
+      .map((response: Response) => <Visit[]> response.json())
+      .catch(this.handleError);
+  }
 }
